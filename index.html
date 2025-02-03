@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reimondi Dante — Translation & Writing Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./styles.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="shortcut icon" href="./images/logo.png">
+<style>
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  </style>
+  <script src="https://kit.fontawesome.com/6081cb6a8f.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="home" class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-barra" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-house"></i> HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-coffee"></i> ABOUT ME</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-suitcase"></i> PORTFOLIO</a>
+    <a href="./Samples.pdf" target="_blank" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pen"></i> SAMPLES</a>
+    <a href="./Curriculum.pdf" target="_blank" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-file"></i> MY CV</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-paper-plane"></i> TALK ME!</a>    
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-barra">
+    <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT ME</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="./Samples.pdf" class="w3-bar-item w3-button" onclick="toggleFunction()">SAMPLES</a>
+    <a href="./Curriculum.pdf" class="w3-bar-item w3-button" onclick="toggleFunction()"> MY CV</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">TALK ME!</a>
+  </div>
+  
+</div>
+
+
+  <!-- The Grid -->
+  <div style="margin-top:45px;" class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4"style="border-radius:2%;">
+        <div class="w3-display-container">
+          <img src="./images/avatar.jpg" style="width:60%; margin-left:20%; margin-top:3%; border-radius:50%; border:2px solid black;" alt="Avatar">
+          <div class="w3-container w3-text-black">
+            <h3 style="text-align:center;">Dante Fabián Reimondi</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-feather fa-fw w3-margin-right w3-large w3-text-teal"></i>Writing & Translation Services</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Santa Fe, Argentina</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>reimondi@protonmail.com</p>
+          <hr>
+
+          <p class="w3-large w3-text-theme"><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i><span class="w3-tag w3-teal w3-round">Skills</span></p>
+          <p> &nbsp; <i class="fa-brands fa-python"></i> &nbsp;  Python</p>
+          <p> &nbsp; <i class="fa-solid fa-user-tie"></i> &nbsp;  Management</p>
+          <p> &nbsp; <i class="fa-solid fa-keyboard"></i> &nbsp;  Transcription</p>
+          <p> &nbsp; <i class="fa-solid fa-magnifying-glass"></i> &nbsp;  Proofreading</p>
+          <p> &nbsp; <i class="fa-solid fa-feather"></i> &nbsp;  Copywriting</p>
+          <p> &nbsp; <i class="fa-solid fa-ghost"></i> &nbsp;  Ghostwriting</p>          
+          <p> &nbsp; <i class="fa-solid fa-robot"></i> &nbsp;  AI Content Edit</p>
+          <p> &nbsp; <i class="fa-solid fa-language"></i> &nbsp;  Translation / Localization</p>
+          <hr>
+
+          <p class="w3-large w3-text-theme"><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i><span class="w3-tag w3-teal w3-round">Languages</span></p>
+          <div style='lifne-height:0.6em;'>
+            <p> &nbsp; 🇪🇸 &nbsp; Español</p>
+            <p> &nbsp; 🇬🇧 &nbsp; English</p>
+            <p> &nbsp; 🇨🇳 &nbsp; 中文</p>
+          </div>
+          <hr>
+
+          <p class="w3-large w3-text-theme"><i class="fa fa-landmark fa-fw w3-margin-right w3-text-teal"></i><span class="w3-tag w3-teal w3-round">Certifications</span></p>
+          
+          <div class="slideshow-container-c">
+
+              <div class="mySlides-c fade-c hoverwrap">
+                <img src="./images/certifications/diplomaConsejo.jpg" style="width:100%" onclick="onClick(this)">
+              </div>
+
+              <div class="mySlides-c fade-c hoverwrap">
+                <img src="./images/certifications/diplomaDatos.png" style="width:100%" onclick="onClick(this)">
+              </div>
+
+              <div class="mySlides-c fade-c hoverwrap">
+                <img src="./images/certifications/charlaModProd.jpg" style="width:100%" onclick="onClick(this)">
+              </div>
+
+              <div class="mySlides-c fade-c hoverwrap">
+                <img src="./images/certifications/distinción.jpg" style="width:100%" onclick="onClick(this)">
+              </div>
+
+              <div class="mySlides-c fade-c hoverwrap">
+                <img src="./images/certifications/prozcert.png" style="width:100%" onclick="onClick(this)">
+              </div>
+
+              <div class="mySlides-c fade-c hoverwrap">
+                <img src="./images/certifications/foroCarreras.jpg" style="width:100%" onclick="onClick(this)">
+              </div>
+
+              <div class="mySlides-c fade-c hoverwrap">
+                <img src="./images/certifications/charlaESI.jpg" style="width:100%" onclick="onClick(this)">
+              </div>
+
+              <div class="mySlides-c fade-c hoverwrap">
+                <img src="./images/certifications/charlaCarreras.jpg" style="width:100%" onclick="onClick(this)">
+              </div>
+
+              <a class="prev-c" onclick="plusSlidesC(-1)">❮</a>
+              <a class="next-c" onclick="plusSlidesC(1)">❯</a>
+
+              <br>
+
+              <div style="text-align:center">
+                <span class="dot-c" onclick="currentSlideC(1)"></span> 
+                <span class="dot-c" onclick="currentSlideC(2)"></span> 
+                <span class="dot-c" onclick="currentSlideC(3)"></span> 
+                <span class="dot-c" onclick="currentSlideC(4)"></span> 
+                <span class="dot-c" onclick="currentSlideC(5)"></span> 
+                <span class="dot-c" onclick="currentSlideC(6)"></span> 
+                <span class="dot-c" onclick="currentSlideC(7)"></span> 
+                <span class="dot-c" onclick="currentSlideC(8)"></span> 
+              </div>
+          </div>
+
+          <hr>
+
+          <p class="w3-large w3-text-theme"><i class="fa fa-regular fa-star fa-fw w3-margin-right w3-text-teal"></i><span class="w3-tag w3-teal w3-round">Reviews</span></p>
+          
+          <div style="max-height:50%" class="slideshow-container-r">
+
+              <div class="mySlides-r fade-r">
+                 <p style="text-align:center;">
+                   <i>"Excellent work which met the deadline. Will surely use Dante's services again."</i>
+                 </p>
+                 <p style="text-align:right;"><b>OSW translation</b></p>
+              </div>
+
+              <div class="mySlides-r fade-r">
+                 <p style="text-align:center;">
+                   <i>"5/5 ⭐ Bueno, rápido, serio."</i>
+                 </p>
+                 <p style="text-align:right;"><b>Luis Risueño Gómez (Autor de libros de finanzas)</b></p>
+              </div>
+
+              <div class="mySlides-r fade-r">
+                 <p style="text-align:center;">
+                   <i>"Final good job."</i>
+                 </p>
+                 <p style="text-align:right;"><b>ABCTransLink Translation Agency</b></p>
+              </div>
+
+              <div class="mySlides-r fade-r">
+                 <p style="text-align:center;">
+                   <i>"5/5 ⭐ Muy profesional y siempre a tiempo, seguiremos trabajando. Gracias Dante."</i>
+                 </p>
+                 <p style="text-align:right;"><b>Tomás Vázquez (Escritor)</b></p>
+              </div>
+
+              <a class="prev-r" onclick="plusSlidesR(-1)">❮</a>
+              <a class="next-r" onclick="plusSlidesR(1)">❯</a>
+
+              <br>
+
+              <div style="text-align:center">
+                <span class="dot-r" onclick="currentSlideR(1)"></span> 
+                <span class="dot-r" onclick="currentSlideR(2)"></span> 
+                <span class="dot-r" onclick="currentSlideR(3)"></span> 
+                <span class="dot-r" onclick="currentSlideR(4)"></span>                 
+              </div>
+              
+          </div>
+
+        </div>
+      </div>
+      <br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div id="about" class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-coffee fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>About Me</h2>
+        <div class="w3-container">
+
+          <h5 class="w3-opracity"><b>Who am I?</b></h5>
+          <p>Hello, my name is Dante. I studied a degree focused on different areas of linguistics and literature. This gives me a series of tools not only to check the coherence, cohesion, syntax and spelling of a text; but also to analyze and develop strategies related to signs and discourses belonging to the area of semiotics and pragmatics. This allows me to manage a discourse (academic, political, marketing) not only in its production process but also thinking about its reception (platform, target audience, code, vocabulary).</p>
+          <h5 class="w3-opracity"><b>Academic career</b></h5>
+          <p>During my studies, I've participated in the legislative sphere of the academy. The journey of each project that is written and presented in the university co-government is an exciting world. One is always learning new things regarding regulations, laws, protocols, treasury, finances, development, among many other spaces. Management and administration is a very productive field when it is developed through good teamwork.</p>
+          <h5 class="w3-opracity"><b>Interests</b></h5>
+          <p>Despite my academic training, I am a fan of programming and free software. I participate in different community projects either through proofreading, translation, or a modest contribution of code. The organization of users to find answers to their needs or problems is always fascinating, not only does it encourage participation but the knowledge that one acquires and tests is invaluable.</p>
+          <h5 class="w3-opracity"><b>Experience</b></h5>
+          <p>At work I have experience in: private classes of subjects with contents which I have studied in my training; localization of employment websites and book sales websites; programming Telegram bots for specific tasks of different entities, both to speed up the search for files in the cloud and also for the field of translation and literature; transcription and editing of forms and administrative documents; proofreading and editing of academic texts, financial education publications and self-help books; translation and editing of biotechnology reports and web articles; translator and reviewer of texts in various NGOs.</p>
+          <h5 class="w3-opracity"><b>Text Importance</b></h5>
+          <p>A well-crafted text not only ensures clear and effective communication but also builds a message that resonates and leaves an impact on the reader. As a co-creator of the process, the reader interprets and brings the content to life, becoming an essential part of the final result.</p>
+          <p>Every linguistic level—from grammar to style—plays a key role in enhancing the message. Similarly, the functions of language (informative, persuasive, emotive, etc.) directly influence the relationship established with the reader or audience. For this reason, creating a text cannot be reduced to automation.</p>
+          <p>Artisanal, careful, and personalized work makes the difference between functional content and content that truly connects, persuades, and endures.</p>
+          <br>
+        </div>        
+      </div>
+
+<!-- Portfolio -->
+      <div id="portfolio" class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-briefcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Portfolio / <a href="./Samples.pdf" style="color:blue;">Samples</a></h2>
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/ows_cuba.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Hand-written document transcripted and translated</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/little_scrap.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Little social media scraper script</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/attachments.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Biotech Docs Translations</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/educacion_financiera.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Financial Education eBooks Layout</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/TG_bots.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Drive files searcher and translator Telegram Bots</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/translation_wikipedia.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Translation and edition of Wikipedia articles</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/translation_crowdin.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Website localization</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/translation_omegat.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Website localization</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/translation_financial_handbook.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Financial Handbook Translation</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/IRCUS.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Translation EN > ES for International Rescue Commitee</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/Singa.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Translation EN > ES for SINGA</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/boliviaProgInt.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Translation EN > ES for Progressive International</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/tetanes.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Editing and ghostwriting of self-help book</div>
+          </div>
+
+          <div class="mySlides fade hoverwrap">
+            <img src="./images/portfolio/review_translation.png" style="width:100%" onclick="onClick(this)">
+            <div class="hovercap">Translation and review of NGO guideline</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+          <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+          <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-10">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+          </div>
+        </div>
+
+        
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span>           
+          <span class="dot" onclick="currentSlide(5)"></span> 
+          <span class="dot" onclick="currentSlide(6)"></span> 
+          <span class="dot" onclick="currentSlide(7)"></span> 
+          <span class="dot" onclick="currentSlide(8)"></span>           
+          <span class="dot" onclick="currentSlide(9)"></span>           
+          <span class="dot" onclick="currentSlide(10)"></span>           
+          <span class="dot" onclick="currentSlide(11)"></span>           
+          <span class="dot" onclick="currentSlide(12)"></span>                               
+          <span class="dot" onclick="currentSlide(13)"></span>                                         
+          <span class="dot" onclick="currentSlide(14)"></span>                                         
+        </div>
+      </div>
+
+      <br>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer id="contact" class="w3-container w3-teal w3-center w3-margin-top">
+  <h4><b>Contact me!</b></h4>
+  <a href="https://t.me/Dante6547" title="Telegram me!" target="_blank"><i class="fa-brands fa-2x fa-telegram w3-hover-opacity"></i></a>
+  <a href="mailto:reimondi@protonmail.com" title="Email me!" target="_blank"><i class="fa-regular fa-2x fa-envelope-open w3-hover-opacity"></i></a>
+  <a href="https://github.com/reimondid" title="My Code Things!" target="_blank"><i class="fa-brands fa-2x fa-github w3-hover-opacity"></i></a>
+</footer>
+
+<script type="text/javascript" src="./myscript.js"></script>
+
+</body>
+</html>
+

@@ -629,3 +629,19 @@ hr {border:1px solid black;}
   display: flex;
   flex-direction: column;
 }
+
+function changelang(){
+var currentlanguage = getComputedStyle(document.body).getPropertyValue("--language")
+if (currentlanguage == 'data-en'){
+document.documentElement.style.setProperty('--language', 'data-du')
+} else {
+document.documentElement.style.setProperty('--language', 'data-en')
+}
+}
+
+:root {
+--language:data-en;
+}
+.bilanguage::after {
+  content: attr(var(--language));
+}

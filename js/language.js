@@ -1,5 +1,6 @@
 // ===== SISTEMA DE IDIOMAS =====
 let currentLang = "en";
+let currentNavLang = "en";
 
 // Diccionario de traducciones
 const translations = {
@@ -66,6 +67,7 @@ const translations = {
         "nonfiction_book3": "Las Bandas Bollinger (2025)"
     }
 };
+
 // Diccionario de traducciones para la barra de navegación
 const navTranslations = {
     "es": {
@@ -73,50 +75,45 @@ const navTranslations = {
         "nav_about": '<i class="fa fa-coffee"></i> SOBRE MÍ',
         "nav_portfolio": '<i class="fa fa-suitcase"></i> PORTAFOLIO',
         "nav_samples": '<i class="fa fa-pen"></i> MUESTRAS',
-        "nav_cv": '<i class="fa fa-file"></i> MI CV',
-        
+        "nav_cv": '<i class="fa fa-file"></i> MI CV'
     },
     "en": {
         "nav_home": '<i class="fa fa-house"></i> HOME',
         "nav_about": '<i class="fa fa-coffee"></i> ABOUT ME',
         "nav_portfolio": '<i class="fa fa-suitcase"></i> PORTFOLIO',
         "nav_samples": '<i class="fa fa-pen"></i> SAMPLES',
-        "nav_cv": '<i class="fa fa-file"></i> MY CV',
+        "nav_cv": '<i class="fa fa-file"></i> MY CV'
     }
 };
 
-let currentNavLang = "en";
-
-// Agregar botón de idioma en la barra de navegación
-document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.getElementById('myNavbar');
-    const langButton = document.createElement('a');
-    langButton.className = 'w3-bar-item w3-button w3-hide-small lang-toggle';
-    langButton.href = 'javascript:void(0);';
-    langButton.innerHTML = '<i class="fa fa-language"></i> ES/EN';
-    langButton.onclick = toggleLanguage;
-    navbar.appendChild(langButton);
-});
-
 // Función para cambiar idioma
 function toggleLanguage() {
+    console.log('Cambiando idioma...');
+    
     currentLang = currentLang === "en" ? "es" : "en";
     currentNavLang = currentNavLang === "en" ? "es" : "en";
+    
+    console.log('Idioma actual:', currentLang);
     
     // Traducir elementos con data-translate
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
+        console.log('Traduciendo elemento:', key, 'a', currentLang);
+        
         if (translations[currentLang][key]) {
             if (element.tagName.toLowerCase() === 'a' || element.tagName.toLowerCase() === 'button') {
                 element.innerHTML = translations[currentLang][key];
             } else {
                 element.textContent = translations[currentLang][key];
             }
+            console.log('✓ Traducido:', key);
+        } else {
+            console.log('✗ No se encontró traducción para:', key);
         }
     });
     
-    // Traducir elementos específicos sin data-translate
-    document.querySelectorAll('.w3-top a').forEach(element => {
+    // Traducir elementos de la barra de navegación
+    document.querySelectorAll('.w3-top a[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
         if (navTranslations[currentNavLang][key]) {
             element.innerHTML = navTranslations[currentNavLang][key];
@@ -126,55 +123,63 @@ function toggleLanguage() {
     // TRADUCIR ELEMENTOS DE LA LISTA
     translateListItems();
     
-    // Actualizar botón de idioma
-    const langButton = document.querySelector('.lang-toggle');
-    if (langButton) {
-        langButton.innerHTML = currentLang === "en" ? '<i class="fa fa-language"></i> EN/ES' : '<i class="fa fa-language"></i> ES/EN';
-    }
+    // Actualizar texto del botón de idioma
+    updateLanguageButton();
+    
+    console.log('Idioma cambiado exitosamente a:', currentLang);
 }
 
 // Función específica para traducir los elementos de la lista
 function translateListItems() {
+    console.log('Traduciendo elementos de lista...');
+    
     // Proofreading Fiction
     const fictionTitle = document.querySelector('.collapsible-item:nth-child(2) .item-header span');
     if (fictionTitle) {
         fictionTitle.textContent = translations[currentLang]["proofreading_fiction"];
+        console.log('✓ Fiction title traducido');
     }
     
     // Proofreading & Edition Non-Fiction
     const nonfictionTitle = document.querySelector('.collapsible-item:nth-child(3) .item-header span');
     if (nonfictionTitle) {
         nonfictionTitle.textContent = translations[currentLang]["proofreading_non_fiction"];
+        console.log('✓ Non-fiction title traducido');
     }
     
     // Wikipedia Contributions
     const wikipediaTitle = document.querySelector('.collapsible-item:nth-child(4) .item-header span');
     if (wikipediaTitle) {
         wikipediaTitle.textContent = translations[currentLang]["wikipedia_contributions"];
+        console.log('✓ Wikipedia title traducido');
     }
     
     // NGO Section
     const ngoTitle = document.querySelector('.collapsible-item:nth-child(5) .item-header span');
     if (ngoTitle) {
         ngoTitle.textContent = translations[currentLang]["ngo_section"];
+        console.log('✓ NGO title traducido');
     }
     
     // English Wikipedia link
     const englishWiki = document.querySelector('a[href*="en.wikipedia.org"]');
     if (englishWiki) {
         englishWiki.textContent = translations[currentLang]["english_wikipedia"];
+        console.log('✓ English Wikipedia link traducido');
     }
     
     // Spanish Wikipedia link
     const spanishWiki = document.querySelector('a[href*="es.wikipedia.org"]');
     if (spanishWiki) {
         spanishWiki.textContent = translations[currentLang]["spanish_wikipedia"];
+        console.log('✓ Spanish Wikipedia link traducido');
     }
     
     // Fiction book
     const fictionBook = document.querySelector('a[href*="Los-que-nos-fuimos"]');
     if (fictionBook) {
         fictionBook.textContent = translations[currentLang]["fiction_book"];
+        console.log('✓ Fiction book traducido');
     }
     
     // Non-Fiction books
@@ -183,9 +188,37 @@ function translateListItems() {
         nonfictionBooks[0].textContent = translations[currentLang]["nonfiction_book1"];
         nonfictionBooks[1].textContent = translations[currentLang]["nonfiction_book2"];
         nonfictionBooks[2].textContent = translations[currentLang]["nonfiction_book3"];
+        console.log('✓ Non-fiction books traducidos');
     }
 }
+
+// Función para actualizar el texto del botón de idioma
+function updateLanguageButton() {
+    const langButtons = document.querySelectorAll('.lang-toggle, .lang-toggle-mobile');
+    langButtons.forEach(button => {
+        if (currentLang === "en") {
+            button.innerHTML = '<i class="fa fa-language"></i> ES/EN';
+        } else {
+            button.innerHTML = '<i class="fa fa-language"></i> EN/ES';
+        }
+    });
+    console.log('Botón de idioma actualizado');
+}
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Sistema de idiomas cargado');
+    console.log('Idioma inicial:', currentLang);
+    
+    // Aplicar traducciones iniciales
+    applyTranslations(currentLang);
+});
+
+// Función para aplicar traducciones
 function applyTranslations(lang) {
+    currentLang = lang;
+    currentNavLang = lang;
+    
     // Traducir elementos con data-translate
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
@@ -198,24 +231,17 @@ function applyTranslations(lang) {
         }
     });
     
-    // Traducir elementos específicos sin data-translate
-    document.querySelectorAll('.w3-top a').forEach(element => {
+    // Traducir elementos de la barra de navegación
+    document.querySelectorAll('.w3-top a[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
-        if (navTranslations[currentNavLang][key]) {
-            element.innerHTML = navTranslations[currentNavLang][key];
+        if (navTranslations[lang][key]) {
+            element.innerHTML = navTranslations[lang][key];
         }
     });
     
-    // TRADUCIR ELEMENTOS DE LA LISTA
+    // Traducir elementos de la lista
     translateListItems();
+    
+    // Actualizar botón de idioma
+    updateLanguageButton();
 }
-
-// Diccionario de traducciones para la barra de navegación
-const navTranslations = {
-    "es": {
-        "nav_home": '<i class="fa fa-house"></i> INICIO',
-        "nav_about": '<i class="fa fa-coffee"></i> SOBRE MÍ',
-        "nav_portfolio": '<i class="fa fa-suitcase"></i> PORTAFOLIO',
-        "nav_samples": '<i class="fa fa-pen"></i> MUESTRAS',
-        "nav_cv": '<i class="fa fa-file"></i> MI CV',
-        // "nav

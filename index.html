@@ -13,42 +13,7 @@
     <script src="https://kit.fontawesome.com/6081cb6a8f.js" crossorigin="anonymous"></script>
 </head>
 
-<script>
-// Código temporal para debugging
-console.log('=== DEBUG CERTIFICATIONS ===');
-console.log('Ruta actual:', window.location.href);
-console.log('Imágenes configuradas:', [
-    './images/certifications/diplomaConsejo.jpg',
-    './images/certifications/diplomaDatos.png',
-    './images/certifications/certificateOLI.png',
-    './images/certifications/charlaModProd.jpg',
-    './images/certifications/distinción.jpg',
-    './images/certifications/prozcert.png',
-    './images/certifications/foroCarreras.jpg',
-    './images/certifications/charlaESI.jpg',
-    './images/certifications/charlaCarreras.jpg'
-]);
-</script>
-
 <body id="home" class="w3-light-grey">
-
-<!-- Panel de contacto flotante compacto -->
-<div id="contact-float" class="contact-float-panel">
-    <div class="contact-icons-compact">
-        <a href="https://t.me/Dante6547" title="Telegram me!" target="_blank" class="contact-icon">
-            <i class="fa-brands fa-telegram"></i>
-        </a>
-        <a href="mailto:reimondi@protonmail.com" title="Email me!" target="_blank" class="contact-icon">
-            <i class="fa-regular fa-envelope-open"></i>
-        </a>
-        <a href="https://github.com/reimondid" title="My Code Things!" target="_blank" class="contact-icon">
-            <i class="fa-brands fa-github"></i>
-        </a>
-    </div>
-</div>
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -61,7 +26,11 @@ console.log('Imágenes configuradas:', [
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small" data-translate="nav_portfolio"><i class="fa fa-suitcase"></i> PORTFOLIO</a>
     <a href="./Samples.pdf" target="_blank" class="w3-bar-item w3-button w3-hide-small" data-translate="nav_samples"><i class="fa fa-pen"></i> SAMPLES</a>
     <a href="./Curriculum.pdf" target="_blank" class="w3-bar-item w3-button w3-hide-small" data-translate="nav_cv"><i class="fa fa-file"></i> MY CV</a>
-    <!-- Botones de contacto eliminados de la barra -->
+    
+    <!-- Botón de idioma -->
+    <a class="w3-bar-item w3-button w3-hide-small lang-toggle" href="javascript:void(0);" onclick="toggleLanguage()">
+      <i class="fa fa-language"></i> ES/EN
+    </a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -71,7 +40,11 @@ console.log('Imágenes configuradas:', [
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
     <a href="./Samples.pdf" class="w3-bar-item w3-button" onclick="toggleFunction()">SAMPLES</a>
     <a href="./Curriculum.pdf" class="w3-bar-item w3-button" onclick="toggleFunction()"> MY CV</a>
-    <!-- Botones de contacto eliminados del menú móvil -->
+    
+    <!-- Botón de idioma en versión móvil -->
+    <a class="w3-bar-item w3-button lang-toggle-mobile" href="javascript:void(0);" onclick="toggleLanguage()">
+      <i class="fa fa-language"></i> ES/EN
+    </a>
   </div>
 </div>
 

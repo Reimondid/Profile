@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Reimondi Dante — Translation & Writing Services</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./styles.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="shortcut icon" href="./images/logo.png">
-<style>
-  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-  </style>
-  <script src="https://kit.fontawesome.com/6081cb6a8f.js" crossorigin="anonymous"></script>
+    <title>Reimondi Dante — Translation & Writing Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="shortcut icon" href="./images/logo.png">
+    <script src="https://kit.fontawesome.com/6081cb6a8f.js" crossorigin="anonymous"></script>
 </head>
 
+<script>
+// Código temporal para debugging
+console.log('=== DEBUG CERTIFICATIONS ===');
+console.log('Ruta actual:', window.location.href);
+console.log('Imágenes configuradas:', [
+    './images/certifications/diplomaConsejo.jpg',
+    './images/certifications/diplomaDatos.png',
+    './images/certifications/certificateOLI.png',
+    './images/certifications/charlaModProd.jpg',
+    './images/certifications/distinción.jpg',
+    './images/certifications/prozcert.png',
+    './images/certifications/foroCarreras.jpg',
+    './images/certifications/charlaESI.jpg',
+    './images/certifications/charlaCarreras.jpg'
+]);
+</script>
+
 <body id="home" class="w3-light-grey">
+
+<!-- Panel de contacto flotante compacto -->
+<div id="contact-float" class="contact-float-panel">
+    <div class="contact-icons-compact">
+        <a href="https://t.me/Dante6547" title="Telegram me!" target="_blank" class="contact-icon">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="mailto:reimondi@protonmail.com" title="Email me!" target="_blank" class="contact-icon">
+            <i class="fa-regular fa-envelope-open"></i>
+        </a>
+        <a href="https://github.com/reimondid" title="My Code Things!" target="_blank" class="contact-icon">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+</div>
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -29,7 +61,7 @@
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small" data-translate="nav_portfolio"><i class="fa fa-suitcase"></i> PORTFOLIO</a>
     <a href="./Samples.pdf" target="_blank" class="w3-bar-item w3-button w3-hide-small" data-translate="nav_samples"><i class="fa fa-pen"></i> SAMPLES</a>
     <a href="./Curriculum.pdf" target="_blank" class="w3-bar-item w3-button w3-hide-small" data-translate="nav_cv"><i class="fa fa-file"></i> MY CV</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small" data-translate="nav_contact"><i class="fa fa-paper-plane"></i> TALK ME!</a>    
+    <!-- Botones de contacto eliminados de la barra -->
   </div>
 
   <!-- Navbar on small screens -->
@@ -39,11 +71,9 @@
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
     <a href="./Samples.pdf" class="w3-bar-item w3-button" onclick="toggleFunction()">SAMPLES</a>
     <a href="./Curriculum.pdf" class="w3-bar-item w3-button" onclick="toggleFunction()"> MY CV</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">TALK ME!</a>
+    <!-- Botones de contacto eliminados del menú móvil -->
   </div>
-  
 </div>
-
 
   <!-- The Grid -->
   <div style="margin-top:45px;" class="w3-row-padding">
@@ -84,60 +114,14 @@
           <hr>
 
           <p class="w3-large w3-text-theme"><i class="fa fa-landmark fa-fw w3-margin-right w3-text-teal"></i><span class="w3-tag w3-teal w3-round">Certifications</span></p>
-          
-          <div class="slideshow-container-c">
 
-              <div class="mySlides-c fade-c hoverwrap">
-                <img src="./images/certifications/diplomaConsejo.jpg" style="width:100%" onclick="onClick(this)">
-              </div>
-
-              <div class="mySlides-c fade-c hoverwrap">
-                <img src="./images/certifications/diplomaDatos.png" style="width:100%" onclick="onClick(this)">
-              </div>
-
-              <div class="mySlides-c fade-c hoverwrap">
-                <img src="./images/certifications/charlaModProd.jpg" style="width:100%" onclick="onClick(this)">
-              </div>
-
-              <div class="mySlides-c fade-c hoverwrap">
-                <img src="./images/certifications/distinción.jpg" style="width:100%" onclick="onClick(this)">
-              </div>
-
-              <div class="mySlides-c fade-c hoverwrap">
-                <img src="./images/certifications/prozcert.png" style="width:100%" onclick="onClick(this)">
-              </div>
-
-              <div class="mySlides-c fade-c hoverwrap">
-                <img src="./images/certifications/foroCarreras.jpg" style="width:100%" onclick="onClick(this)">
-              </div>
-
-              <div class="mySlides-c fade-c hoverwrap">
-                <img src="./images/certifications/charlaESI.jpg" style="width:100%" onclick="onClick(this)">
-              </div>
-
-              <div class="mySlides-c fade-c hoverwrap">
-                <img src="./images/certifications/charlaCarreras.jpg" style="width:100%" onclick="onClick(this)">
-              </div>
-
-              <a class="prev-c" onclick="plusSlidesC(-1)">❮</a>
-              <a class="next-c" onclick="plusSlidesC(1)">❯</a>
-
-              <br>
-
-              <div style="text-align:center">
-                <span class="dot-c" onclick="currentSlideC(1)"></span> 
-                <span class="dot-c" onclick="currentSlideC(2)"></span> 
-                <span class="dot-c" onclick="currentSlideC(3)"></span> 
-                <span class="dot-c" onclick="currentSlideC(4)"></span> 
-                <span class="dot-c" onclick="currentSlideC(5)"></span> 
-                <span class="dot-c" onclick="currentSlideC(6)"></span> 
-                <span class="dot-c" onclick="currentSlideC(7)"></span> 
-                <span class="dot-c" onclick="currentSlideC(8)"></span> 
-              </div>
+          <!-- Contenedor para la galería dinámica -->
+          <div id="certifications-gallery">
+              <!-- El contenido se generará automáticamente aquí -->
           </div>
 
           <hr>
-
+                    
           <p class="w3-large w3-text-theme"><i class="fa fa-regular fa-star fa-fw w3-margin-right w3-text-teal"></i><span class="w3-tag w3-teal w3-round">Reviews</span></p>
           
           <div style="max-height:50%" class="slideshow-container-r">
@@ -215,137 +199,289 @@
         </div>        
       </div>
 
-<!-- Portfolio -->
-      <div id="portfolio" class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-briefcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Portfolio / <a href="./Samples.pdf" style="color:blue;">Samples</a></h2>
+<!-- Portfolio & Links Section -->
+<div id="portfolio" class="w3-container w3-card w3-white w3-margin-bottom">
+    <h2 class="w3-text-grey w3-padding-16">
+        <i class="fa fa-briefcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Portfolio / <a href="./Samples.pdf" style="color:blue;">Samples</a>
+    </h2>
 
-        <div class="slideshow-container">
+    <div class="w3-row">
+        <!-- Columna izquierda: Portfolio Slideshow (65%) -->
+        <div class="w3-col m8" style="padding-right:16px;">
+            <div class="slideshow-container" style="max-width:100%;">
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/ows_cuba.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Hand-written document transcripted and translated</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/ows_cuba.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Hand-written document transcripted and translated</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/little_scrap.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Little social media scraper script</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/little_scrap.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Little social media scraper script</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/attachments.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Biotech Docs Translations</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/attachments.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Biotech Docs Translations</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/educacion_financiera.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Financial Education eBooks Layout</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/educacion_financiera.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Financial Education eBooks Layout</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/TG_bots.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Drive files searcher and translator Telegram Bots</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/TG_bots.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Drive files searcher and translator Telegram Bots</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/translation_wikipedia.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Translation and edition of Wikipedia articles</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/translation_wikipedia.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Translation and edition of Wikipedia articles</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/translation_crowdin.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Website localization</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/translation_crowdin.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Website localization</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/translation_omegat.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Website localization</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/translation_omegat.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Website localization</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/translation_financial_handbook.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Financial Handbook Translation</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/translation_financial_handbook.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Financial Handbook Translation</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/IRCUS.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Translation EN > ES for International Rescue Commitee</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/IRCUS.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Translation EN > ES for International Rescue Commitee</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/Singa.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Translation EN > ES for SINGA</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/Singa.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Translation EN > ES for SINGA</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/boliviaProgInt.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Translation EN > ES for Progressive International</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/boliviaProgInt.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Translation EN > ES for Progressive International</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/tetanes.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Editing and ghostwriting of self-help book</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/tetanes.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Editing and ghostwriting of self-help book</div>
+                </div>
 
-          <div class="mySlides fade hoverwrap">
-            <img src="./images/portfolio/review_translation.png" style="width:100%" onclick="onClick(this)">
-            <div class="hovercap">Translation and review of NGO guideline</div>
-          </div>
+                <div class="mySlides fade hoverwrap">
+                    <img src="./images/portfolio/review_translation.png" style="width:100%" onclick="onClick(this)">
+                    <div class="hovercap">Translation and review of NGO guideline</div>
+                </div>
 
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
 
+            </div>
+            
+            <!-- Modal para imágenes en tamaño completo -->
+            <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+                <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image">
+                    <i class="fa fa-remove"></i>
+                </span>
+                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-10">
+                    <img id="img01" class="w3-image">
+                    <p id="caption" class="w3-opacity w3-large"></p>
+                </div>
+            </div>
+
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span>           
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+                <span class="dot" onclick="currentSlide(7)"></span> 
+                <span class="dot" onclick="currentSlide(8)"></span>           
+                <span class="dot" onclick="currentSlide(9)"></span>           
+                <span class="dot" onclick="currentSlide(10)"></span>           
+                <span class="dot" onclick="currentSlide(11)"></span>           
+                <span class="dot" onclick="currentSlide(12)"></span>                               
+                <span class="dot" onclick="currentSlide(13)"></span>                                         
+                <span class="dot" onclick="currentSlide(14)"></span>                                         
+            </div>
         </div>
-        
-        <!-- Modal for full size images on click-->
-        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-          <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-          <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-10">
-            <img id="img01" class="w3-image">
-            <p id="caption" class="w3-opacity w3-large"></p>
-          </div>
+
+<!-- Columna derecha: Lista de Links (35%) -->
+<div class="w3-col m4">
+    <div class="w3-container">
+        <ul class="w3-ul">
+            <!-- Progressive International -->
+            <li class="w3-padding-small w3-hover-light-grey">
+                <a href="https://www.google.com/search?q=Reimondi+site:progressive.international&sca_esv=114685c43ef135a0&nfpr=1&filter=0&biw=1366&bih=631&dpr=1" 
+                   target="_blank" class="w3-text-teal" style="text-decoration:none; display:block;">
+                    <div class="w3-row">
+                        <div class="w3-col s2 m3">
+                            <div class="w3-circle w3-red w3-center" style="width:32px; height:32px; display:flex; align-items:center; justify-content:center;">
+                                <i class="fa fa-globe w3-text-white" style="font-size:14px;"></i>
+                            </div>
+                        </div>
+                        <div class="w3-col s10 m9" style="display:flex; align-items:center;">
+                            <span style="font-size:14px; font-weight:bold;">Progressive International</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            
+<!-- Proofreading Fiction -->
+<li class="w3-padding-small w3-hover-light-grey collapsible-item">
+    <div style="text-decoration:none; display:block; cursor: pointer;" class="item-header">
+        <div class="w3-row">
+            <div class="w3-col s2 m3">
+                <div class="w3-circle w3-orange w3-center" style="width:32px; height:32px; display:flex; align-items:center; justify-content:center;">
+                    <i class="fa-solid fa-book-open w3-text-white" style="font-size:14px;"></i>
+                </div>
+            </div>
+            <div class="w3-col s10 m9" style="display:flex; align-items:center;">
+                <span style="font-size:14px; font-weight:bold;" data-translate="proofreading_fiction">Proofreading Fiction</span>
+            </div>
         </div>
-
-        
-        <br>
-
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-          <span class="dot" onclick="currentSlide(4)"></span>           
-          <span class="dot" onclick="currentSlide(5)"></span> 
-          <span class="dot" onclick="currentSlide(6)"></span> 
-          <span class="dot" onclick="currentSlide(7)"></span> 
-          <span class="dot" onclick="currentSlide(8)"></span>           
-          <span class="dot" onclick="currentSlide(9)"></span>           
-          <span class="dot" onclick="currentSlide(10)"></span>           
-          <span class="dot" onclick="currentSlide(11)"></span>           
-          <span class="dot" onclick="currentSlide(12)"></span>                               
-          <span class="dot" onclick="currentSlide(13)"></span>                                         
-          <span class="dot" onclick="currentSlide(14)"></span>                                         
-        </div>
-      </div>
-
-      <br>
-
-    <!-- End Right Column -->
     </div>
-    
-  <!-- End Grid -->
+    <!-- Sub-links para Fiction -->
+    <div class="w3-padding-small sub-links" style="padding-left: 40px; display: none;">
+        <div class="w3-small">
+                            <a href="https://a.co/d/7Aon6J1" 
+                               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block;">
+                               "Los que nos fuimos" (2025)
+                            </a>
+        </div>
+    </div>
+</li>
+
+<!-- Proofreading and Edition Non-Fiction -->
+<li class="w3-padding-small w3-hover-light-grey collapsible-item">
+    <div style="text-decoration:none; display:block; cursor: pointer;" class="item-header">
+        <div class="w3-row">
+            <div class="w3-col s2 m3">
+                <div class="w3-circle w3-green w3-center" style="width:32px; height:32px; display:flex; align-items:center; justify-content:center;">
+                    <i class="fa-solid fa-file-lines w3-text-white" style="font-size:14px;"></i>
+                </div>
+            </div>
+            <div class="w3-col s10 m9" style="display:flex; align-items:center;">
+                <span style="font-size:14px; font-weight:bold;" data-translate="proofreading_non_fiction">Proofreading & Edition Non-Fiction</span>
+            </div>
+        </div>
+    </div>
+    <!-- Sub-links para Non-Fiction -->
+    <div class="w3-padding-small sub-links" style="padding-left: 40px; display: none;">
+        <div class="w3-small">
+                            <a href="https://amzn.eu/d/gpDad2H" 
+                               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block; margin-bottom: 4px;">
+                               "Acción del Precio 2.0" (2023)
+                            </a>
+                            <a href="https://amzn.eu/d/b9zg9Cs" 
+                               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block; margin-bottom: 4px;">
+                               "Smart Money Concept 3.0" (2023)
+                            </a>
+                            <a href="https://amzn.eu/d/gOxjOCt" 
+                               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block;">
+                               "Las bandas de Bollinger" (2025)
+                            </a>
+        </div>
+    </div>
+</li>
+
+<!-- Wikipedia Contributions -->
+<li class="w3-padding-small w3-hover-light-grey collapsible-item">
+    <div style="text-decoration:none; display:block; cursor: pointer;" class="item-header">
+        <div class="w3-row">
+            <div class="w3-col s2 m3">
+                <div class="w3-circle w3-blue w3-center" style="width:32px; height:32px; display:flex; align-items:center; justify-content:center;">
+                    <i class="fa-brands fa-wikipedia-w w3-text-white" style="font-size:14px;"></i>
+                </div>
+            </div>
+            <div class="w3-col s10 m9" style="display:flex; align-items:center;">
+                <span style="font-size:14px; font-weight:bold;" data-translate="wikipedia_contributions">Wikipedia Contributions</span>
+            </div>
+        </div>
+    </div>
+    <!-- Sub-links para Wikipedia -->
+    <div class="w3-padding-small sub-links" style="padding-left: 40px; display: none;">
+        <div class="w3-small">
+                            <a href="https://en.wikipedia.org/wiki/Special:Contributions/Dinto2" 
+                               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block; margin-bottom: 4px;">
+                               English Wikipedia
+                            </a>
+                            <a href="https://es.wikipedia.org/wiki/Especial:Contribuciones/Dinto2" 
+                               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block;">
+                               Spanish Wikipedia
+                            </a>
+        </div>
+    </div>
+</li>        
+
+<!-- NGO / ONG -->
+<li class="w3-padding-small w3-hover-light-grey collapsible-item">
+    <div style="text-decoration:none; display:block; cursor: pointer;" class="item-header">
+        <div class="w3-row">
+            <div class="w3-col s2 m3">
+                <div class="w3-circle w3-purple w3-center" style="width:32px; height:32px; display:flex; align-items:center; justify-content:center;">
+                    <i class="fa-solid fa-hands-helping w3-text-white" style="font-size:14px;"></i>
+                </div>
+            </div>
+            <div class="w3-col s10 m9" style="display:flex; align-items:center;">
+                <span style="font-size:14px; font-weight:bold;" data-translate="ngo_section">NGO</span>
+            </div>
+        </div>
+    </div>
+    <!-- Sub-links para NGO -->
+    <div class="w3-padding-small sub-links" style="padding-left: 40px; display: none;">
+        <div class="w3-small">
+            <a href="https://reactionary.international/cases/at-your-doorstep/es/" 
+               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block; margin-bottom: 4px;">
+               • Reactionary International
+            </a>
+        <div class="w3-small">
+            <a href="https://www.mcmahonryan.org/" 
+               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block; margin-bottom: 4px;">
+               • McMahon Ryan Child Advocacy Center
+            </a>
+            <a href="https://girlsincpgh.org/" 
+               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block; margin-bottom: 4px;">
+               • Girls Inc.
+            </a>
+            <a href="https://www.rescue.org/" 
+               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block; margin-bottom: 4px;">
+               • International Rescue Committee
+            </a>
+            <a href="https://wearesinga.org/en/" 
+               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block; margin-bottom: 4px;">
+               • Singa
+            </a>
+            <a href="https://flyinglabs.org/" 
+               target="_blank" class="w3-text-blue" style="text-decoration:none; display:block;">
+               • Flying Labs
+            </a>
+        </div>
+    </div>
+</li>
+</ul>
+    </div>
+</div>  <!-- End Grid -->
   </div>
   
   <!-- End Page Container -->
 </div>
 
-<footer id="contact" class="w3-container w3-teal w3-center w3-margin-top">
-  <h4><b>Contact me!</b></h4>
-  <a href="https://t.me/Dante6547" title="Telegram me!" target="_blank"><i class="fa-brands fa-2x fa-telegram w3-hover-opacity"></i></a>
-  <a href="mailto:reimondi@protonmail.com" title="Email me!" target="_blank"><i class="fa-regular fa-2x fa-envelope-open w3-hover-opacity"></i></a>
-  <a href="https://github.com/reimondid" title="My Code Things!" target="_blank"><i class="fa-brands fa-2x fa-github w3-hover-opacity"></i></a>
-</footer>
-
-<script type="text/javascript" src="./myscript.js"></script>
-
+    <!-- JavaScript -->
+    <script src="./js/core.js"></script>
+    <script src="./js/slideshows.js"></script>
+    <script src="./js/certifications.js"></script>
+    <script src="./js/language.js"></script>
+    
 </body>
 </html>
-

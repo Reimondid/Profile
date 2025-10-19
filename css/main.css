@@ -1,0 +1,389 @@
+/* ===== ESTILOS PRINCIPALES ===== */
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+/* Barra de navegación personalizada */
+.w3-barra {
+  color: #fff !important;
+  background-color: #222 !important;
+}
+
+/* Botón de idioma */
+.lang-toggle {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+  background-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Layout mejorado */
+.w3-col.m8 {
+  width: 65% !important;
+}
+
+.w3-col.m4 {
+  width: 35% !important;
+}
+
+/* Mejoras para la galería del portfolio */
+.slideshow-container {
+  max-width: 100% !important;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
+
+/* Items de lista mejorados */
+.w3-ul li.w3-padding-small {
+  padding: 10px 8px !important;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+  min-height: 40px;
+}
+
+.w3-ul li:last-child {
+  border-bottom: none;
+}
+
+.w3-ul li.w3-hover-light-grey:hover {
+  background-color: #f5f5f5 !important;
+  transform: translateX(3px);
+  border-left: 3px solid #009688;
+}
+
+/* Estructura para items con íconos */
+.w3-ul li .w3-row {
+  align-items: center;
+}
+
+.w3-ul li .w3-col.s2,
+.w3-ul li .w3-col.s10 {
+  display: flex;
+  align-items: center;
+}
+
+.w3-ul li .w3-circle {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.w3-ul li .fa-brands,
+.w3-ul li .fa {
+  font-size: 14px !important;
+}
+
+/* Colores de círculos */
+.w3-circle.w3-red { background-color: #f44336 !important; }
+.w3-circle.w3-orange { background-color: #ff9800 !important; }
+.w3-circle.w3-blue { background-color: #2196F3 !important; }
+
+/* Ajustes para certificaciones */
+.slideshow-container-c {
+  max-width: 90% !important;
+}
+
+/* Ajustes para reviews */
+.slideshow-container-r {
+  height: 180px;
+  overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .w3-col.m8, .w3-col.m4 {
+    width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 16px;
+  }
+  
+  .slideshow-container {
+    max-width: 95% !important;
+  }
+  
+  .mySlides img {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .w3-ul li.w3-padding-small {
+    padding: 12px 10px !important;
+  }
+  
+  .prev, .next, .prev-c, .next-c, .prev-r, .next-r {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* ===== ESTILOS PARA LA NUEVA ESTRUCTURA DE LISTA ===== */
+
+/* Estilos para los sub-items */
+.w3-padding-small .w3-padding-small {
+    border-bottom: none !important;
+    margin-top: 8px;
+    padding-left: 12px !important;
+}
+
+.w3-padding-small .w3-small a {
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.w3-padding-small .w3-small a:hover {
+    background-color: #e3f2fd;
+    color: #1565c0 !important;
+    text-decoration: none !important;
+    transform: translateX(2px);
+}
+
+/* Mejorar la visualización de los items principales */
+.w3-ul li.w3-padding-small {
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    margin-bottom: 4px;
+}
+
+.w3-ul li.w3-padding-small:hover {
+    border-left-color: #009688;
+    background-color: #fafafa !important;
+}
+
+/* Colores específicos para cada categoría */
+.w3-circle.w3-red { 
+    background-color: #f44336 !important; 
+    box-shadow: 0 2px 4px rgba(244, 67, 54, 0.3);
+}      /* Progressive International */
+
+.w3-circle.w3-orange { 
+    background-color: #ff9800 !important; 
+    box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3);
+}   /* Fiction */
+
+.w3-circle.w3-green { 
+    background-color: #4CAF50 !important; 
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+}    /* Non-Fiction */
+
+.w3-circle.w3-blue { 
+    background-color: #2196F3 !important; 
+    box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3);
+}     /* Wikipedia */
+
+/* Estilos para los títulos de sección */
+.w3-ul li.w3-padding-small .w3-row:first-child {
+
+}
+
+.w3-ul li.w3-padding-small .w3-row:first-child span {
+    font-size: 15px !important;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Indicador visual para items con sub-links */
+.w3-ul li.w3-padding-small:not(:first-child) .w3-row:first-child::after {
+    font-size: 10px;
+    margin-left: 8px;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+.w3-ul li.w3-padding-small:not(:first-child):hover .w3-row:first-child::after {
+    color: #009688;
+}
+
+/* Ajustes responsive para sub-items */
+@media (max-width: 600px) {
+    .w3-padding-small .w3-padding-small {
+        padding: 6px 0 !important;
+        padding-left: 8px !important;
+    }
+    
+    .w3-padding-small .w3-small {
+        font-size: 12px !important;
+    }
+    
+    .w3-padding-small .w3-small a {
+        padding: 3px 6px;
+    }
+}
+
+/* Estilo para el bullet de los sub-items */
+.w3-padding-small .w3-small a::before {
+    margin-right: 6px;
+    color: #666;
+    font-weight: bold;
+}
+
+.w3-padding-small .w3-small a:hover::before {
+    color: #1565c0;
+}
+
+/* Color violeta para NGO */
+.w3-circle.w3-purple { 
+    background-color: #9C27B0 !important; 
+    box-shadow: 0 2px 4px rgba(156, 39, 176, 0.3);
+}
+
+/* ===== ESTILOS PARA EL PANEL DE CONTACTO FLOTANTE COMPACTO ===== */
+
+/* Panel de contacto flotante compacto */
+.contact-float-panel {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background: #000;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    z-index: 1000;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.contact-icons-compact {
+    display: flex;
+    dflex-direction: column;
+    padding: 12px;
+    gap: 8px;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.contact-icon:hover {
+    background: #009688;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,150,136,0.3);
+    border-color: #00796b;
+}
+
+.contact-icon i {
+    font-size: 18px;
+}
+
+/* Tooltips para los íconos */
+.contact-icon {
+    position: relative;
+}
+
+.contact-icon::after {
+    position: absolute;
+    left: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+}
+
+.contact-icon::before {
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-left-color: #333;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+}
+
+.contact-icon:hover::after,
+.contact-icon:hover::before {
+    opacity: 1;
+}
+
+/* Responsive - Versión móvil */
+@media (max-width: 992px) {
+    .contact-float-panel {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        top: auto;
+        left: auto;
+        border-radius: 50px;
+        padding: 8px;
+    }
+    
+    .contact-icons-compact {
+        flex-direction: row;
+        padding: 0;
+        gap: 12px;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    
+    .contact-icon i {
+        font-size: 20px;
+    }
+    
+    /* Ocultar tooltips en móvil */
+    .contact-icon::after,
+    .contact-icon::before {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-float-panel {
+        bottom: 15px;
+        right: 15px;
+        padding: 6px;
+    }
+    
+    .contact-icon {
+        width: 46px;
+        height: 46px;
+    }
+    
+    .contact-icon i {
+        font-size: 18px;
+    }
+    
+    .contact-icons-compact {
+        gap: 10px;
+    }
+}
+
+/* Asegurar que el contenido no se superponga */
+.w3-content.w3-margin-top {
+    margin-top: 45px !important;
+}
